@@ -11,17 +11,17 @@ pipeline {
         }
          stage('Test') {
             steps {
-                sh 'gradlew test'
+                sh './gradlew test'
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'gradlew docker'
+                sh './gradlew docker'
             }
         }
         stage('Run Docker Image') {
             steps {
-                sh 'gradlew dockerRun'
+                sh './gradlew dockerRun'
             }
         }
     }
